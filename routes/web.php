@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProdukController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/navbar', function () {
-//     return view('navbar');
-// });
-
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/master', function () {
     return view('master');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Route::get('/produk',[ProdukController::class,'index'])
+->name('produk');
+
+Route::get('/produk/delete/{id}', [ProdukController::class,'destroy'])
+->name('produkdelete');
+
+Route::get('/tambah',[ProdukController::class,'create'])
+->name('tambah');
+
+
