@@ -10,7 +10,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Jumlah</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Jumlah   ">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Jumlah">
   </div>
   <a href=""><button type="button" class="btn btn-primary btn-sm">Submit</button></a>
 @endsection

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\CategoriesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,5 +36,16 @@ Route::get('/produk/delete/{id}', [ProdukController::class,'destroy'])
 
 Route::get('/tambah',[ProdukController::class,'create'])
 ->name('tambah');
+Route::post('/tambah/add',[ProdukController::class,'add'])
+->name('tambahAdd');
 
-
+// categori
+Route::get('/categories',[CategoriesController::class,'index'] )
+->name('categories');
+Route::get('/categoriesdelete/delete/{id}',[CategoriesController::class,'destroy'] )
+->name('categoriesdelete');
+// customers
+Route::get('/customers',[CustomersController::class,'index'] )
+->name('customers');
+Route::get('/customersdelete/delete/{id}',[CustomersController::class,'destroy'] )
+->name('customersdelete');

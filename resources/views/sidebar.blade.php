@@ -66,6 +66,18 @@
                   <p>Tambah Produk</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('customers')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('categories')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
             </ul> 
           </li>
           <li class="nav-item">

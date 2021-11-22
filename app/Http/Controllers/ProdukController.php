@@ -23,5 +23,17 @@ class ProdukController extends Controller
         return view('produk.tambah_produk');
     }
     
+    public function add(Request $request){
+        $produk = new produk();
+        $produk -> name = $request ->name;
+        $produk -> description = $request ->description;
+        $produk -> stock = $request ->stock;
+        $produk -> price = $request ->price;
+        $produk -> category_id = $request ->category_id;
+        $produk -> save();
+        
+        return redirect()-> back();
+        
+    }
     //
 }
