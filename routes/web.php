@@ -33,6 +33,10 @@ Route::get('/produk',[ProdukController::class,'index'])
 
 Route::get('/produk/delete/{id}', [ProdukController::class,'destroy'])
 ->name('produkdelete');
+Route::get('/produkedit/edit/{id}', [ProdukController::class,'edit'])
+->name('produkedit');
+Route::post('/produkupdate/update/{id}', [ProdukController::class,'update'])
+->name('produkupdate');
 
 Route::get('/tambah',[ProdukController::class,'create'])
 ->name('tambah');

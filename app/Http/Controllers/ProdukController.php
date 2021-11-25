@@ -35,5 +35,16 @@ class ProdukController extends Controller
         return redirect()-> back();
         
     }
+    
+    public function edit($id){
+        $getproduk = produk::find($id);
+        return view('produk.edit_produk',['produk'=>$getproduk]);}
+
+    public function update(Request $request,$id){
+        $getproduk =produk::find($id);
+        $getproduk->update($request->all());
+        return redirect('/produk')->with('sukses','Data Berhasil di Update');
+        
+    }
     //
 }
